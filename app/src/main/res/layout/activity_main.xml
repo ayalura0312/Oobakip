@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fffdb2"
+    tools:context="com.example.android.oobakip.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="#"
+        android:id="@+id/firstDigitTextView"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/scoreValueTextView"
+        android:layout_alignStart="@+id/answer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="X"
+        android:id="@+id/sign"
+        android:paddingLeft="60dp"
+        android:layout_alignTop="@+id/firstDigitTextView"
+        android:layout_toRightOf="@+id/firstDigitTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="#"
+        android:id="@+id/secondDigitTextView"
+        android:layout_above="@+id/answer"
+        android:layout_toEndOf="@+id/scoreValueTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="="
+        android:id="@+id/equalSign"
+        android:layout_alignTop="@+id/secondDigitTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="46dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/answer"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/firstDigitTextView"
+        android:layout_centerHorizontal="true">
+        <requestFocus />
+    </EditText>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/resultBox"
+        android:layout_marginTop="25dp"
+        android:textSize="40dp"
+        android:layout_below="@+id/answer"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Score:"
+        android:id="@+id/scoreTextView"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/firstDigitTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="0"
+        android:paddingLeft="90dp"
+        android:id="@+id/scoreValueTextView"
+        android:layout_alignTop="@+id/scoreTextView"
+        android:layout_toRightOf="@+id/scoreTextView" />
+
+</RelativeLayout>
